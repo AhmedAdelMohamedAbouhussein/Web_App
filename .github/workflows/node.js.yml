@@ -13,7 +13,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -22,7 +22,7 @@ jobs:
         run: npm ci
         working-directory: my-react-app
 
-      - name: Build
+      - name: Build Vite App
         run: npm run build
         working-directory: my-react-app
 
